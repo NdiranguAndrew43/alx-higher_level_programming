@@ -1,15 +1,32 @@
 #!/usr/bin/python3
 
-"""Defines a function for adding two integers"""
+"""
+    This is a module that will calculate the sum of two values
+"""
+
 
 def add_integer(a, b=98):
-    """Float arguments are typecast to ints before addition is perfomed."""
-    """Raises: TypeError: If either a or b is a non-integer and non-float."""
+    """
+    This is a function that takes two integers and returns their sum.
 
-    if((not isinstance(a, int) and not isinstance(a, float))):
-        raise TypeError("A must be an integer")
-    if((not isinstance(b, int) and not isinstance(b, float))):
-        raise TypeError("B must be an integer")
+    Args:
+     a: int
+     b: int
 
-    """Function returns a sum of integer a and b"""
-    return (int(a) + int(b))
+    Returns:
+        the sum of a and b.
+
+    Raises:
+        TypeError: if either of the arguments are not an integer.
+    """
+    
+    if not isinstance(a, int) and not isinstance(a, float):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, int) and not isinstance(b, float):
+        raise TypeError("b must be an integer")
+    if isinstance(a, str):
+        raise TypeError("a must be an integer")
+    if isinstance(b, str):
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
+
