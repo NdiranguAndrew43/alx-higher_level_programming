@@ -1,35 +1,35 @@
 >>> add_integer = __import__('0-add_integer').add_integer
->>> print(add_integer(3))
+>>> add_integer(3)
 101
->>> print(add_integer(0, 15))
+>>> add_integer(0, 15)
 15
->>> print(add_integer(4, 7))
+>>> add_integer(4, 7)
 11
->>> print(add_integer(0, 0))
+>>> add_integer(0, 0)
 0
->>> print(add_integer(2.5, -1.5))
+>>> add_integer(2.5, -1.5)
 1
->>> print(add_integer(-15, -22))
+>>> add_integer(-15, -22)
 -37
->>> print(add_integer(1.2, 3.55))
+>>> add_integer(1.2, 3.55)
 4
->>> print(add_integer())
+>>> add_integer()
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
->>> print(add_integer('a', 'b'))
+>>> add_integer('a', 'b')
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> print(add_integer('a', 3))
+>>> add_integer('a', 3)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> print(add_integer(float('inf'), 0))
+>>> add_integer(float('inf'), 0)
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
->>> print(22, 'b')
+>>> print(add_integer(22, 'b'))
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
