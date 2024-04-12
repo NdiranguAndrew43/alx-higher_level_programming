@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""
+'''
     This is a module that will calculate the sum of two values
-"""
+'''
 
 
 def add_integer(a, b=98):
-    """
+    '''
     This is a function that takes two integers and returns their sum.
 
     Args:
@@ -18,7 +18,7 @@ def add_integer(a, b=98):
 
     Raises:
         TypeError: if either of the arguments are not an integer.
-    """
+    '''
     
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
