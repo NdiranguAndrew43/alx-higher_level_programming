@@ -2,4 +2,63 @@
 This is a text file with the doctests for 2-matrix-divided.py
 """
 
-
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix1 = [[2, 4, 6], [8, 10, 12]]
+    >>> matrix_divided(matrix1, 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> matrix_divided(matrix1, 4)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+    >>> matrix_divided(matrix1, 2.0)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> matrix_divided(matrix1, 4.0)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+    >>> matrix_divided(matrix1, 0.5)
+    [[4.0, 8.0, 12.0], [16.0, 20.0, 24.0]]
+    >>> matrix_divided(matrix1, 2.5)
+    [[0.8, 1.6, 2.4], [3.2, 4.0, 4.8]]
+    >>> matrix_divided(matrix1, 4.5)
+    [[0.44, 0.89, 1.33], [1.78, 2.22, 2.67]]
+    >>> matrix2 = [['str', 4, 6], ['not float', 10, 12]]
+    >>> matrix_divided(matrix2, 2)
+    Traceback (most recent call last):
+      File "<doctest 2-matrix_divided.txt[10]>", line 1, in <module>
+      ...
+      raise TypeError(errmsg)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided(matrix2, 4.0)
+    Traceback (most recent call last):
+      File "<doctest 2-matrix_divided.txt[11]>", line 1, in <module>
+      ...
+      raise TypeError(errmsg)
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided(matrix1, 0)
+    Traceback (most recent call last):
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\doctest.py", line 1334, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[12]>", line 1, in <module>
+        matrix_divided(matrix1, 0)
+      File "C:\Users\Andrew\Desktop\ALX-LOCAL\alx-higher_level_programming\0x07-python-test_driven_development\2-matrix_divided.py", line 48, in matrix_divided
+        raise ZeroDivisionError("division by zero")
+    ZeroDivisionError: division by zero
+    >>> matrix_divided(matrix1, srt)
+    Traceback (most recent call last):
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\doctest.py", line 1334, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[13]>", line 1, in <module>
+        matrix_divided(matrix1, srt)
+    NameError: name 'srt' is not defined
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\doctest.py", line 1334, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 2-matrix_divided.txt[14]>", line 1, in <module>
+        matrix_divided(matrix, 2)
+    NameError: name 'matrix' is not defined
+    >>> matrix3 = [[2, 4, 6, 8], [10, 12]]
+    >>> matrix_divided(matrix3, 2)
+    Traceback (most recent call last):
+      File "<doctest 2-matrix_divided.txt[16]>", line 1, in <module>
+        matrix_divided(matrix3, 2)
+      File "C:\Users\Andrew\Desktop\ALX-LOCAL\alx-higher_level_programming\0x07-python-test_driven_development\2-matrix_divided.py", line 46, in matrix_divided
+        raise TypeError("Each row of the matrix must have the same size")
+    TypeError: Each row of the matrix must have the same size

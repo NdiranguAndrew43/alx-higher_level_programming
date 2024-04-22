@@ -22,23 +22,27 @@ def matrix_divided(matrix, div):
     TypeError is raised when div is not an integer or float
     ZeroDivisionError is raised when div is equal to zero
     """
+    
+    # this is the error message we will display for non-matrix entry
     errmsg = "matrix must be a matrix (list of lists) of integers/floats"
+    
+    # if statements to check the validty of the matrix.
     if not matrix:
         raise TypeError(errmsg)
     if not isinstance(matrix, list):
         raise TypeError(errmsg)
     for lists in matrix:
-        if not isinstance(lists, list):
+        if not isinstance(lists, list):     # code to check the lists in the matrix
             raise TypeError(errmsg)
         for item in lists:
-            if not isinstance(item, int) and not isinstance(item, float):
+            if not isinstance(item, int) and not isinstance(item, float):   # check the type() for items in the matrix list, must be flaot or int.
                 raise TypeError(errmsg)
     for lists in matrix:
         if len(lists) == 0:
             raise TypeError(errmsg)
-    if not isinstance(div, int) and not isinstance(div, float):
+    if not isinstance(div, int) and not isinstance(div, float):     # verify the number for the matrix to be divided by, checking for non zero/int/float
         raise TypeError("div must be a number")
-    if not all(len(lists) == len(matrix[0]) for lists in matrix):
+    if not all(len(lists) == len(matrix[0]) for lists in matrix):   # will make sure all the lists in the matrix are the same size
         raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
         raise ZeroDivisionError("division by zero")
