@@ -11,3 +11,6 @@ Tests Files
 			test file for function add-integer
 		2. 2-matrix_divided.txt:
 			test file for function matrix_integer
+		3. 3-say_my_name.txt:
+			test file for function say_my_name
+
